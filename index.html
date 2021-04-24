@@ -5,35 +5,68 @@
         <!-- stylesheets and metadata go here -->
        <title>My CS130 Homepage</title>       
        <link rel="stylesheet" href="style.css">
+       <link rel="preconnect" href="https://fonts.gstatic.com"> 
+       <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+
    <body>
-       <!-- HTML content tags go here. Change anything you want! -->
-       <header>
-           <h1>My CS130 Homepage</h1>
-       </header> 
-       <main>
-            <section id="tutorials">
-                <h2>Tutorials</h2>
-                <!-- 
-                    Links to your tutorial assignments go here.
-                    When you submit a new tutorial, add a link to it
-                    here (if applicable)
-                -->
-            </section>
-            <section id="homework">
-                <h2>Homework</h2>
-                <!-- 
-                    Links to your Homework assignments go here.
-                    When you submit a new tutorial, add a link to it
-                    here (if applicable)
-                -->
-            </section>
-            <section id="inspiration">
-                <h2>Design Inspiration</h2>
-                <!-- 
-                    Links to 5-10 websites that inspire you
-                -->
-            </section>
-        </main>
+       <div class="container">
+
+           <div class="header">
+               <h1>My CS130 Homepage</h1>
+           </div>
+
+           <div class="tutorials">
+               <h2>Tutorials</h2>
+               <ul>
+                <li>
+                    <a href="tutorial01/index.html">Tutorial 1</a>
+                </li>
+                <li>
+                    <a href="tutorial03/index.html">Tutorial 3</a>
+                </li>
+            </ul>
+           </div>
+
+           <div class="Homework">
+               <h2>Homework</h2>
+                    <ul>
+                        <li>Homework 1</li>
+                        <ul>
+                            <li>
+                                <a href="hw01/01_cssgrid/index.html">Grid Layout</a>
+                            </li>
+                            <li>
+                                <a href="hw01/02_flexbox/index.html">Photo Gallery</a>
+                            </li>
+                        </ul>
+                    </ul>
+           </div>
+
+           <div class="Inspiration">
+               <h2>Design Inspiration</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.lapointcamps.com/surfcamp/spain/fuerteventura/">LaPoint Surf</a>: I admire the shifting image/video background
+                    </li>
+                    <li>
+                        <a href="http://www.feedmusic.com">Feed</a>: Awesome scroll function, especially with the background video
+                    </li>
+                    <li>
+                        <a href="https://simplychocolate.dk">Simply Chocolate</a>: Fantastic contrast which change when scrolling.
+                    </li>
+                    <li>
+                        <a href="https://koox.co.uk">Nice use of whitespace</a>
+                    </li>
+                    <li>
+                        <a href="https://www.etq-amsterdam.com">Shifting images background</a>: Really clean images, which does not blur focus!
+                    </li>
+                </ul>
+           </div>
+        </div>
+        <div class=video>
+           <video src="video.mp4" muted loop autoplay fill> </video>
+        </div>
    </body>
 </html>

@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: Playfair Display;
+    font-size: flex;
+}
+
+body {
+    display: grid;
+    overflow: hidden;
+    margin: 0px;
+    grid-template-columns: 33vw 34vw 33vw;
+    grid-template-rows: 10vh 85vh 5vh;
+    grid-template-areas:
+    "top top top"
+    "primary primary primary"
+    "bottom bottom bottom";
+    height: 100vh;
+    background-color: #001c51;
+    color: white;
+}
+footer, nav, #featured-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: dotted 1px black;
+}
+
+main nav {
+    color:#fb6640;
+    background-color: white;
+}
+
+main {
+    grid-area: primary;
+    overflow-y: scroll;
+    z-index: 1000;
+}
+
+
+footer {
+    grid-area: bottom;
+}
+
+header {
+    grid-area: top;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: dotted 1px black;
+    color: white;
+    text-transform: uppercase;
+} 
+
+header a {
+    color:white;
+    text-decoration: none;
+}
+
+.headerleft {
+    width: 33vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headercenter {
+    grid-area: topcenter;
+    width: 34vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerright {
+    grid-area: topright;
+    width: 33vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.main-home img {
+    background-size:cover;
+}
+
+footer {
+    justify-content: left;
+    align-items:flex-end;
+}
+
+#featured-content {
+    min-height: 100vh;
+    background-color: white;
+}
+
+.headerleft {
+    width: 33vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interview-card-one {
+    grid-area: primary;
+    width: 33vw;
+    display: flex;
+    color: #001c51;
+    justify-content: center;
+}
+
+.interview-card-two {
+    grid-area: primary;
+    width: 34vw;
+    display: flex;
+    color: #001c51;
+    justify-content: center;
+} 
+
+.interview-card-three {
+    grid-area: primary;
+    width: 33vw;
+    display: flex;
+    color: #001c51;
+    justify-content: center;
+} 

@@ -57,7 +57,7 @@ const displayArtist = (art) => {
                         <h3>${art.name}</h3>
                         <div class="footer">
                             <a href="${art.spotify_url}" target="_blank">
-                                view on spotify
+                                View on spotify
                             </a>
                         </div>
                     </div>
@@ -75,7 +75,9 @@ const displayTracks = (foundtracks) => {
         for (t=0;t < Math.min(5, lentracks); t++){
             template = `<section class="track-item preview" data-preview-track="${foundtracks[t].preview_url}">
                         <img src= "${foundtracks[t].album.image_url}">
-                        <i class="fas play-track fa-play" aria-hidden="true"></i>
+                        <a href="${foundtracks[t].preview_url}" target="_blank">
+                            <i class="fas play-track fa-play" aria-hidden="true"> </i>
+                            </a>
                         <div class="label">
                             <h3>${foundtracks[t].name}</h3>
                             <p>${foundtracks[t].artist.name}</p>
@@ -86,6 +88,8 @@ const displayTracks = (foundtracks) => {
         }
     }
 };
+
+audioPlayer.setAudioFile(preview_url);
 
 const displayAlbums = (foundalbums) => {
     if(foundalbums[0] == null){
@@ -99,8 +103,8 @@ const displayAlbums = (foundalbums) => {
                                 <img src="${foundalbums[t].image_url}">
                                 <h3>${foundalbums[t].name}</h3>
                             <div class="footer">
-                            <a href="${foundalbums[t].preview_url}">
-                            view on spotify
+                            <a href="${foundalbums[t].spotify_url}" target="_blank">
+                                View on spotify
                             </a>
                             </div>
                             </div>

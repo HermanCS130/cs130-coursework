@@ -16,6 +16,21 @@ const search = (ev) => {
     }
 }
 
+const playTrack = (ev) => {
+    const elem = ev.currentTarget;
+    //preview URL has been stashed in the "data-preview-track attribute."
+    const previewURL = elem.getAttribute('data-preview-track');
+    console.log(previewURL);
+    if (previewURL) {
+        audioPlayer.setAudioFile(previewURL);
+        audioPlayer.play();
+        
+    } else {
+        console.log("there is no preview for this track")
+    }
+    document.querySelector('footer .track-item').innerHTML = elem.innerHTML;
+};
+
 const getTracks = (term) => {
     url = baseURL + "?type=track&q=" + term;
     fetch(url)
@@ -73,9 +88,9 @@ const displayTracks = (foundtracks) => {
         document.querySelector("#tracks").innerHTML = "";
         const lentracks = foundtracks.length;
         for (t=0;t < Math.min(5, lentracks); t++){
-            template = `<section class="track-item preview" data-preview-track="${foundtracks[t].preview_url}">
+            template = `<section class="track-item preview" data-preview-track="${foundtracks[t].preview_url}" onclick="playTrack(event)";>
                         <img src= "${foundtracks[t].album.image_url}">
-                        <a href="${foundtracks[t].preview_url}" target="_blank">
+                        <a href="${foundtracks[t].spotify_url}" target="_blank">
                             <i class="fas play-track fa-play" aria-hidden="true"> </i>
                             </a>
                         <div class="label">
@@ -89,7 +104,6 @@ const displayTracks = (foundtracks) => {
     }
 };
 
-audioPlayer.setAudioFile(preview_url);
 
 const displayAlbums = (foundalbums) => {
     if(foundalbums[0] == null){
@@ -98,7 +112,7 @@ const displayAlbums = (foundalbums) => {
         document.querySelector("#albums").innerHTML = "";
         const lenalbums = foundalbums.length;
         for (t=0;t < lenalbums; t++){
-            template = `<section class="album-card" id="${foundalbums[t].id}">
+            template = `<section class="album-card" id="${foundalbums[t].id}" onclick="showAlbumTracks(event)">
                             <div>
                                 <img src="${foundalbums[t].image_url}">
                                 <h3>${foundalbums[t].name}</h3>

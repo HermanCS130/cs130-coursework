@@ -93,10 +93,6 @@ footer {
     align-items:flex-end;
 }
 
-#featured-content {
-    min-height: 100vh;
-    background-color: white;
-}
 
 .headerleft {
     width: 33vw;
@@ -106,26 +102,152 @@ footer {
     justify-content: center;
 }
 
-.interview-card-one {
-    grid-area: primary;
-    width: 33vw;
-    display: flex;
-    color: #001c51;
-    justify-content: center;
+#featured-content {
+    min-height: 100vh;
+    background-color: white;
 }
 
-.interview-card-two {
-    grid-area: primary;
-    width: 34vw;
-    display: flex;
-    color: #001c51;
-    justify-content: center;
-} 
+/* All Content CSS */
 
-.interview-card-three {
-    grid-area: primary;
-    width: 33vw;
-    display: flex;
-    color: #001c51;
+
+.main-allcontent {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100vh - 10vh);
+    grid-template-areas:
+       "gallery";
+    height: 100vh;
+    background: white;
+}
+
+#featured-allcontent{
+    grid-area: gallery;
+    
+}
+
+.cards {
+    padding-top: 2vh;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.card > div {
+    width: 23%;
+    margin: 10px;
+    border: solid 1px #fb6640;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #001c51;
+}
+
+
+.card iframe {
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.caption {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-size-adjust: cover;
+    color: white;
+    display:flex;
     justify-content: center;
-} 
+    flex-wrap: wrap;
+}
+
+.nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.footer {
+    position:bottom;
+}
+
+/* splash page CSS */
+.splash {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 20000;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity:0;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: -10;
+    transition: all 0.5s;
+}
+
+/* aboutus CSS */
+#featured-aboutus{
+    background-color: white;
+    height: 100%;
+    padding: 10vw;
+}
+.aboutus {
+    color: black;
+    position:top;
+    /* justify-content: center; */
+    /* align-items: center; */
+    display:block;
+    line-height: 1.5;
+}
+
+#featured-aboutus h1 {
+    color:#001c51;
+    font-size: 3em;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.aboutus p{
+    margin-block-start: 0;
+}
+
+.contactus h1{
+    padding-top:2vh;
+}
+
+.contactus{
+    position: relative;
+}
+
+.contactus input {
+    width: 100%;
+    height: 4vh;
+    justify-content: center;
+    padding: 6px 10px 6px 36px;
+    border-color: #fb6640;
+}
+.fa-envelope {
+    position: fixed;
+    color: #001c51;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-size: 1.3em;
+    font-variant: normal;
+    text-rendering: auto;
+    padding: 6px 10px 6px 6px; 
+}

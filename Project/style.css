@@ -18,7 +18,7 @@ body {
     background-color: #001c51;
     color: white;
 }
-footer, nav, #featured-content {
+footer, nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,6 +91,8 @@ header a {
 footer {
     justify-content: left;
     align-items:flex-end;
+    background-color: #001c51;
+    z-index: 19999;
 }
 
 
@@ -101,10 +103,17 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-#featured-content {
-    min-height: 100vh;
+#map {
     background-color: white;
+    display: inline-block;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+#featured-content {
+    height: 90vh;
+    width: 100vw;
 }
 
 /* All Content CSS */
@@ -123,6 +132,61 @@ footer {
 #featured-allcontent{
     grid-area: gallery;
     
+}
+
+.interview-card-one {
+    position: relative;
+}
+.interview-card-two {
+    position: relative;
+}
+.interview-card-three {
+    position: relative;
+}
+.interview-card-four {
+    position: relative;
+}
+.interview-card-five {
+    position: relative;
+}
+.interview-card-six {
+    position: relative;
+}
+.interview-card-seven {
+    position: relative;
+}
+.interview-card-eight {
+    position: relative;
+}
+.interview-card-nine {
+    position: relative;
+}
+.interview-card-ten {
+    position: relative;
+}
+.interview-card-eleven {
+    position: relative;
+}
+.interview-card-twelve {
+    position: relative;
+}
+.interview-card-thirteen {
+    position: relative;
+}
+.interview-card-fourteen {
+    position: relative;
+}
+.interview-card-fifteen {
+    position: relative;
+}
+.interview-card-sixteen {
+    position: relative;
+}
+.interview-card-seventeen {
+    position: relative;
+}
+.interview-card-eighteen {
+    position: relative;
 }
 
 .cards {
@@ -152,6 +216,7 @@ footer {
     background-size: cover;
     width: 100%;
     height: 250px;
+    z-index: 300
 }
 
 .caption {
@@ -251,3 +316,302 @@ footer {
     text-rendering: auto;
     padding: 6px 10px 6px 6px; 
 }
+
+/* Individual Video Page */
+
+/* .individual-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: calc(100vh - 10vh);
+    grid-template-areas:
+       "gallery";
+    height: 100vh;
+    background: white;
+    color: grey;
+} */
+
+#individual-featured-content{
+    /* grid-area: gallery; */
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.individual-video {
+    position: relative;
+    width: 100vw;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#individual-featured-content iframe{
+    display: block;
+    margin: auto;
+    padding-top: 3vh;
+    background-size: cover;
+    border: 0;
+    height: 55vh;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 60vw;
+    z-index:10000;
+}
+
+
+
+.individual-caption {
+    /* position: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    padding-top: 5vh;
+    color: #001c51;
+    font-size: 2.03em;
+}
+
+.individual-description {
+    justify-content: center;
+    padding-top: 2vh;
+    color: grey;
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
+
+/* .interview-card-one .individual-link { 
+    display:inline-block;
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    background-image: url('empty.gif');
+    overflow: hidden;
+    } */
+.interview-card-one > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.interview-card-two > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.interview-card-three > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+.interview-card-four > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-five > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-six > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-seven > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-eight > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-nine > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-ten > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-eleven > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-twelve > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-thirteen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-fourteen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-fifteen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-sixteen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-seventeen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+.interview-card-eighteen > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none; /* No underlines on the link */
+    z-index: 100000; /* Places the link above everything else in the div */
+    background-color: #FFF; /* Fix to make div clickable in IE */
+    opacity: 0; /* Fix to make div clickable in IE */
+    filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+  
